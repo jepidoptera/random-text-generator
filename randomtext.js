@@ -45,8 +45,8 @@ function getRandomText(nofWords){
     // build a paragraph
     var returnval = "";
     var sentenceLength = 0;
-    var minSentence = 5;
-    var maxSentence = 25;
+    var minSentence = 1;
+    var maxSentence = 20;
     for (i = 0; i < nofWords; i++){
         var random = Math.random() * totalWordLength;
         var relativeWordLengthsoFar = 0;
