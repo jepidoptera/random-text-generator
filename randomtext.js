@@ -80,3 +80,37 @@ function getRandomText(nofWords){
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+function getRandomWord (syllables) {
+    var word = "";
+    var startingConsonants = 
+    "b bl br bw c ch chr cl cr d dr f fr fl fw g gn gr gl gw h j k kl kr kw l m n \
+     p ph pl pr pw q qu r r rw s st str sl sk skr sc scr sch sh sn sm sp spr sq squ \
+     st str sw sz t th tr tl tw v vl vr w wr x y z".split(" ");
+    var vowels = "a e i o u y".split(" ");
+    var doubleVowels = "aa ae ai ao au ay ea ee ei eo eu ey ia ie ii oa oe oi oo ou ua ue ui uu"
+    .split(" ").concat(vowels);
+    var endingConsonants = 
+    "b c ch ck ct d f ft g h j k ks l lm lk lp ls lt ls lst m mp mb mt n ng p pt pmt \
+    q r rb rd rf rft rg rk rl rk rp rm rn rs rst rt rx rv s sh sk sm sp st sht t ts v w wl x z";
+    for (i = 0; i < syllables; i++) {
+        var syl = "";
+        sylType = Math.floor(Math.random() * 4);
+        switch (sylType) {
+        case 0:
+            syl = getRandom(startingConsonants) + getRandom(vowels) + getRandom(endingConsonants);
+        case 1:
+            syl = getRandom(startingConsonants) + getRandom(doubleVowels) + getRandom(endingConsonants);
+        case 2:
+            syl = getRandom(startingConsonants) + getRandom(vowels);
+        case 3:
+            syl = getRandom(vowels) + getRandom(endingConsonants);
+        }
+        word += syl;
+    }
+    return word;
+}
+
+function getRandom(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
