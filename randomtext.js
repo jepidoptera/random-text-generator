@@ -1,11 +1,12 @@
 
-/*jshint esversion: 6 */
-window.onload = function(){
+// jshint esversion: 6
+// jshint multistr: true
+window.addEventListener('load', () => {
     elements = document.querySelectorAll('.randomtext');
         elements.forEach(element => {
         fillElement(element);
     });
-};
+});
 
 function clickGenerate(){
     var textField = document.getElementById("textField");
