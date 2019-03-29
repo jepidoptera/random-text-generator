@@ -1,13 +1,6 @@
-# CSS Positioning
-
-* Work with the same or different partners on this activity, but make sure **each** member of the group is typing out their own code! 
-
-* Create a file called `positioning.html` and a file called `positioning.css`. 
-
-* Using HTML/CSS, create the layout shown on the screen.
-
-* For reference, the colors used on the screen are `#eee` and `#999`.
-
-* For further reference, you can generate paragraphs of lorem ipsum text using <http://www.lipsum.com/feed/html>. You need to make this page scroll to see how the fixed position element behaves.
-
-* HINT: Use the code from the last few activities to help get you started.
+One of my earliest Javascript projects, this came about as a response to the constant "lorem ipsum..." I was seeing, and my wish to:
+1. have something more unique to fill in my paragraphs with, and
+2. learn about Javascript arrays and DOM manipulation.
+The program automatically fills in any elements tagged with the ".randomText" class, using the number currently in the element's text as a guide for how much text to fill in.  So for example:
+<p class="randomText">42</p>
+would be filled with 42 random words.  The words are chosen from an array which I made up during slow moments in class, and are biased toward the shorter words from that list.
