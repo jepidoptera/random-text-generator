@@ -62,6 +62,7 @@ function getRandomText(nofWords){
                 else {
                     returnval += wordOptions[j];
                 }
+                // add spacing and punctuation
                 sentenceLength += 1;
                 if (sentenceLength - minSentence > Math.random() * (maxSentence - minSentence)){
                     returnval += ".  ";
@@ -74,6 +75,7 @@ function getRandomText(nofWords){
             }
         }
     }
+    // add a final period
     if (sentenceLength > 0) returnval = returnval.slice(0, returnval.length - 1) + ".";
     return returnval;
 }
@@ -83,6 +85,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function getRandomWord (syllables) {
+    // option to create a random (theoretically pronounceable) word from this collection of letters
     var word = "";
     var startingConsonants = 
     "b bl br bw c ch chr cl cr d dr f fr fl fw g gn gr gl gw h j k kl kr kw l m n \
@@ -113,5 +116,6 @@ function getRandomWord (syllables) {
 }
 
 function getRandom(array) {
+    // get a random element out of a given array
     return array[Math.floor(Math.random() * array.length)];
 }
